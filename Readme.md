@@ -1,7 +1,20 @@
-# Getting Started with Google Cloud Speech API and the Google Cloud Client libraries
+# Run
+```
+mvn clean package
+mvn exec:java -DRecognize -Dexec.args="multi-language ./resources/podcast.wav"
+```
+# Config 
+  * กรณีที่เปลี่ยน sound file ต่างแล้ว exce ไม่ผ่าน ให้แก้ Config in method " transcribeMultiLanguage() "
+  ```
+    เปลี่ยน SampleRateHertz : setSampleRateHertz()
+    เปลี่ยน Channel : setAudioChannelCount()
+    เปลี่ยน Encoding : setEncoding()
+  ``` 
 
-<a href="https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/GoogleCloudPlatform/java-docs-samples&page=editor&open_in_editor=speech/cloud-client/README.md">
-<img alt="Open in Cloud Shell" src ="http://gstatic.com/cloudssh/images/open-btn.png"></a>
+
+
+
+# Getting Started with Google Cloud Speech API and the Google Cloud Client libraries
 
 [Google Cloud Speech API][speech] enables easy integration of Google speech
 recognition technologies into developer applications.
